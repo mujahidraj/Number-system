@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Systems Explained</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Number Systems Explorer</h1>
+            <p>Understand and work with different numerical bases</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="Number System converter/index.html">Converter</a></li>
+                <li><a href="calculator/index.html">Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Master Digital Number Systems</h2>
+                <p>Learn how computers represent and manipulate numbers using different bases</p>
+                <div class="cta-buttons">
+                    <a href="Number System converter/index.html" class="btn btn-primary">Convert Numbers</a>
+                    <a href="calculator/index.html" class="btn btn-secondary">Use Calculator</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="image/Number-System.png" alt="Number Systems">
+            </div>
+        </section>
+
+        <section class="number-systems">
+            <h2>Common Number Systems</h2>
+            <div class="systems-grid">
+                <div class="system-card">
+                    <div class="system-icon binary">
+                        <i class="fas fa-digital-tachograph"></i>
+                    </div>
+                    <h3>Binary (Base-2)</h3>
+                    <p>Uses only two digits: 0 and 1. Fundamental to all digital systems and computer architecture.</p>
+                    <div class="example">Example: 1010<sub>2</sub> = 10<sub>10</sub></div>
+                </div>
+
+                <div class="system-card">
+                    <div class="system-icon decimal">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Decimal (Base-10)</h3>
+                    <p>The standard system using digits 0-9. Used in everyday counting and mathematics.</p>
+                    <div class="example">Example: 42<sub>10</sub></div>
+                </div>
+
+                <div class="system-card">
+                    <div class="system-icon octal">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Octal (Base-8)</h3>
+                    <p>Uses digits 0-7. Historically important in computing systems.</p>
+                    <div class="example">Example: 52<sub>8</sub> = 42<sub>10</sub></div>
+                </div>
+
+                <div class="system-card">
+                    <div class="system-icon hex">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Hexadecimal (Base-16)</h3>
+                    <p>Uses digits 0-9 and letters A-F. Compact representation of binary data.</p>
+                    <div class="example">Example: 2A<sub>16</sub> = 42<sub>10</sub></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="conversion-methods">
+            <h2>Conversion Methods</h2>
+            <div class="method-tabs">
+                <div class="tab active" data-tab="division">Division Method</div>
+                <div class="tab" data-tab="expansion">Expansion Method</div>
+                <div class="tab" data-tab="shortcuts">Shortcut Methods</div>
+            </div>
+            
+            <div class="tab-content active" id="division">
+                <img src="image/UTF8-Table-7802.webp" alt="Binary code">
+                <p>To convert from decimal to another base, repeatedly divide the number by the target base and record the remainders in reverse order.</p>
+                <pre>
+Convert 42 to binary:
+42 ÷ 2 = 21 remainder 0
+21 ÷ 2 = 10 remainder 1
+10 ÷ 2 = 5 remainder 0
+5 ÷ 2 = 2 remainder 1
+2 ÷ 2 = 1 remainder 0
+1 ÷ 2 = 0 remainder 1
+
+Read remainders upwards: 101010
+                </pre>
+            </div>
+            
+            <div class="tab-content" id="expansion">
+                <p>To convert from any base to decimal, multiply each digit by its positional value (base^position) and sum the results.</p>
+                <pre>
+Convert 2A<sub>16</sub> to decimal:
+2 × 16<sup>1</sup> = 32
+A (10) × 16<sup>0</sup> = 10
+32 + 10 = 42<sub>10</sub>
+                </pre>
+            </div>
+            
+            <div class="tab-content" id="shortcuts">
+                <img src="image/hex_1.webp" alt="Hexadecimal chart">
+                <p>Special relationships between binary, octal, and hexadecimal allow quick conversions:</p>
+                <ul>
+                    <li>1 hexadecimal digit = 4 binary digits</li>
+                    <li>1 octal digit = 3 binary digits</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mujahid's Number Systems Explorer | Educational Tool</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
